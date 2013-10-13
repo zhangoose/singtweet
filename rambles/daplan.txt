@@ -1,0 +1,49 @@
+======================
+SING TWEET PLAN
+======================
+
+USING
+------------
+* python-twitter (?)
+* js [html/css]
+* flask
+* git/heroku
+
+
+NEED [TO LEARN]
+-------------
+* 7 tones C->B
+	* https://github.com/sergi/jsmidi
+* how to get a @handle's tweets 
+	* in array form??
+* how to get tweet from python --> js
+* [how to generate mp3]
+
+IDEA
+------------
+* webapp: front end ask for someone's twitterhandle
+* take recent 20 tweets
+* [generate mp3] play song
+	* just store midi into file
+* GETTING THE NOTE
+	* parse tweet % 7 get index of note
+	* do for each tweet
+	* ignore spaces, punct, [url's]
+		* overachieving:
+		* make URL's --> 'u'
+		* make pictures --> 'p'
+
+QUESTION
+------------
+* can I access other people's tweets
+
+RAMBLINGS
+------------
+* only need frontend html for...
+	* asking for twitter handle
+	* saying that MIDI formed
+	* [displaying each tweet as each note is played?? & playing the midi???]
+* if anything... BASIC
+	* be able to parse tweets
+	* form at least a sequence of notes
+	* ...if midi doesn't work
