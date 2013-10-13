@@ -11,27 +11,6 @@ var g_note = new Audio(" {{ url_for('static', filename ='piano-g.wav') }}" );
 var a_note = new Audio(" {{ url_for('static', filename ='piano-a.wav') }}" );
 var b_note = new Audio(" {{ url_for('static', filename ='piano-b.wav') }}" );
 
-/*
-console.log('1');
-  setTimeout(function () {
-	   setTimeout(function () {
-			console.log('2');
-		   c_note.play();
-			setTimeout(function () {
-				 console.log('3')
-				d_note.play();
-				setTimeout(function(){
-					e_note.play();
-
-				}, 1000)
-
-			 }, 1000)
-		}, 1000)
-
-	}, 1000)
-*/
-
-
 /**
  * a shitton of nested settimeout functions.
  * yeah.
@@ -65,6 +44,22 @@ function playDaTunes(sounds){
 									setTimeout(function(){
 										console.log("sound 7");
 										sounds[7].play();
+										setTimeout(function(){
+											console.log("sound 8");
+											sounds[8].play();
+											setTimeout(function(){
+												console.log("sound 9");
+												sounds[9].play();
+												setTimeout(function(){
+													console.log("sound 10");
+													sounds[10].play();
+													setTimeout(function(){
+														console.log("sound 11");
+														sounds[11].play();
+													},900)
+												},900)
+											},900)
+										},900)
 									},900)
 								},900)
 							},900)
@@ -168,14 +163,16 @@ function init(){
 	tempTweetArr.push( '{{ tweetArr[5] }}' );
 	tempTweetArr.push( '{{ tweetArr[6] }}' );
 	tempTweetArr.push( '{{ tweetArr[7] }}' );
-	/*
-	 * tempTweetArr.push( '{{ tweetArr[8] }}' );
+
+	tempTweetArr.push( '{{ tweetArr[8] }}' );
 	tempTweetArr.push( '{{ tweetArr[9] }}' );
 	tempTweetArr.push( '{{ tweetArr[10] }}' );
 	tempTweetArr.push( '{{ tweetArr[11] }}' );
+/*	
 	tempTweetArr.push( '{{ tweetArr[12] }}' );
 	tempTweetArr.push( '{{ tweetArr[13] }}' );
-	*/
+*/
+	
 	//var tempArr = oneTweet(
 	console.log(tempTweetArr);
 
