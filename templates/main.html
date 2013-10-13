@@ -14,7 +14,10 @@
 		<style>
 			body{
 
-				background-color:rgb(0,170,200);
+				background-image:url( " {{ url_for('static', filename='twitbg.gif') }} ");
+				filter: alph(opacity=60);
+				opacity:0.6;
+
 			}
 			div{
 				margin-left: 170px;
@@ -22,16 +25,16 @@
 			}
 			h1{
 				font-size:4em;
-				color:white;
+				color:rgb(50,80,50);
 				font-family:Helvetica;
 			}
 			p{
-				color:white;
+				color:rgb(50,80,50);
 				font-family:Helvetica;
 
 			}
 			li{
-				color:white;
+				color:rgb(50,80,50);
 				font-family:Helvetica;
 			}
 			.tweets{
