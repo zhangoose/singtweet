@@ -10,9 +10,15 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def wrong():
+	return render_template("wrong.html");
 
-	user = api.get_user("dproi")
+@app.route('/<username>')
+def hello(username):
+
+	#user = api.get_user("dproi")
+	user = api.get_user(username)
+	
 	status = user.status
 	print status.text
 
@@ -20,16 +26,20 @@ def hello():
 
 	tweetArr = []
 	string = ""
+	count = 0
 
 	for tweets in time:
-		pee = tweets.text
-		pee = pee.replace("'", '').strip()
-		pee = pee.replace('"', '').strip()
-		tweetArr.append(pee)
-		string = string + pee
+		if count < 12:	
+			texty = tweets.text
+			texty = texty.replace("'", '').strip()
+			texty = texty.replace('"', '').strip()
+			texty = texty.replace('\n','').strip()
+			tweetArr.append(texty)
+			string = string + texty
+			count = count + 1
 
 
-	return render_template("main.html", tweetArr = tweetArr) 
+	return render_template("main.html", tweetArr = tweetArr, username = username) 
 
 if __name__ == "__main__":
 	app.debug = True

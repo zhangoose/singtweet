@@ -7,16 +7,56 @@
 			{% include "parse.js" %}
 		</script>
 
+		
+
 	</head>
 	<body>
+		<style>
+			body{
 
-		<h1> main </h1>
+				background-color:rgb(0,150,200);
+			}
+			div{
+				margin-left: 170px;
+				margin-top: 200px;
+			}
+			h1{
+				font-size:4em;
+				color:white;
+				font-family:Helvetica;
+			}
+			p{
+				color:white;
+				font-family:Helvetica;
 
-		{% for tweet in tweetArr %}
+			}
+			.tweets{
+				padding: -100px;
+				font-size: 0.9em;
+			}
+
+			#notes{
+				letter-spacing: 30px;
+				font-weight: bold;
+				font-size:2em;
+			}
 
 
-		<p id="rawr"> {{ tweet }} </p>
+		</style>
+		<div>
+			<h1> playing @{{ username }}'s tweets</h1>
+		
+			<p id="notes">
+			<script>
+				$("#notes").html(gNotes[0] + gNotes[1] + gNotes[2] + gNotes[3] + gNotes[4] + gNotes[5] + gNotes[6] + gNotes[7] + gNotes[8] + gNotes[9] + gNotes[10] + gNotes[11]);
+			</script>
+			</p>
+			{% for tweet in tweetArr %}
 
-		{% endfor %}
+			<p id="rawr" class="tweets"> {{ tweet }} </p>
+
+			{% endfor %}
+			
+		</div>
 	</body>
 </html>
