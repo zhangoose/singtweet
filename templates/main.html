@@ -30,6 +30,10 @@
 				font-family:Helvetica;
 
 			}
+			li{
+				color:white;
+				font-family:Helvetica;
+			}
 			.tweets{
 				padding: -100px;
 				font-size: 0.9em;
@@ -51,12 +55,13 @@
 				$("#notes").html(gNotes[0] + gNotes[1] + gNotes[2] + gNotes[3] + gNotes[4] + gNotes[5] + gNotes[6] + gNotes[7] + gNotes[8] + gNotes[9] + gNotes[10] + gNotes[11]);
 			</script>
 			</p>
-			{% for tweet in tweetArr %}
+			<ol>
+				{% for tweet in tweetArr %}
 
-			<p id="rawr" class="tweets"> {{ tweet }} </p>
+				<li id="rawr" class="tweets"> {{ tweet }} </p>
 
-			{% endfor %}
-			
+				{% endfor %}
+			</ol>	
 		</div>
 	</body>
 </html>

@@ -19,8 +19,8 @@ def hello(username):
 	#user = api.get_user("dproi")
 	user = api.get_user(username)
 	
-	status = user.status
-	print status.text
+#	status = user.status
+#	print status.text
 
 	time = user.timeline()
 
