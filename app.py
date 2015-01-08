@@ -2,8 +2,8 @@ import tweepy
 from flask import Flask, render_template
 from tweepy import OAuthHandler
 
-auth = tweepy.OAuthHandler("rANvChN8zCxKbJQGmqNn4Q","fIvWCneiBqTIK6Ib0aYWNpqGeBk8lDZrwVv5VUYbYA")
-auth.set_access_token("1890876067-a9vKw3b73SjyUvSl4TD5FjncU60n5B6bHnnbhiH","3iAEHa7WJAsmjvjVcTioyLo7vG8h1noKJeMLWzyo6E")
+auth = tweepy.OAuthHandler(CONSUMER_TOKEN,CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN,ACCESS_SECRET)
 
 api= tweepy.API(auth)
 app = Flask(__name__)
