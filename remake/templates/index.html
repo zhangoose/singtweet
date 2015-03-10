@@ -17,10 +17,7 @@
 				opacity:0.6;
 
 			}
-			div{
-				margin-left: 170px;
-				margin-top: 200px;
-			}
+			
 			h1{
 				font-size:4em;
 				color:rgb(50,80,50);
@@ -35,38 +32,46 @@
 				color:rgb(50,80,50);
 				font-family:Helvetica;
 			}
-			.tweets{
-				padding: -100px;
-				font-size: 0.9em;
+			.section{
+				display: inline-block;
 			}
-
 			.notes{
 				float:left;
 				letter-spacing: 30px;
 				font-weight: bold;
 				font-size:2em;
 			}
+			.tweets{
+				font-size: 0.9em;
+			}
+			#wrap{
+				margin-left: 170px;
+				margin-top: 200px;
+			}
 
 
 		</style>
-		<div>
+		<div id="wrap">
 			<h1> playing @{{ username }}'s tweets</h1>
 		
-			<ul>
-				{% for note in notes %}
+			<div class="section">
+				<ul>
+					{% for note in notes %}
 
-				<li class="notes"> {{ note }} </p>
-				
-				{% endfor %}
-			</ul>
-				
-			<ol>
-				{% for tweet in orig_tweet_arr %}
+					<li class="notes"> {{ note }} </p>
+					
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="section">	
+				<ol>
+					{% for tweet in orig_tweet_arr %}
 
-				<li class="tweets"> {{ tweet }} </p>
+					<li class="tweets"> {{ tweet }} </p>
 
-				{% endfor %}
-			</ol>	
+					{% endfor %}
+				</ol>	
+			</div>
 		</div>
 	</body>
 </html>

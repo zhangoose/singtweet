@@ -9,4 +9,8 @@ it generates notes from your first 12 tweets and plays them
 * not use regex
 * have more ok function names and stuff
 
+
 **i made a new folder because i still like looking back on my old shitty code i wrote like 1.5 years ago**
+
+i'm also a little sad that remaking this took me less than 1/6 of the time it took me to actually make this
+
