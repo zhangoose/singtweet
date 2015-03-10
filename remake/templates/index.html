@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title> main </title>
+		<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript">
+			{% include "play.js" %}
+		</script>
+
+	</head>
+	<body>
+		<style>
+			body{
+
+				background-image:url( " {{ url_for('static', filename='twitbg.gif') }} ");
+				filter: alph(opacity=60);
+				opacity:0.6;
+
+			}
+			div{
+				margin-left: 170px;
+				margin-top: 200px;
+			}
+			h1{
+				font-size:4em;
+				color:rgb(50,80,50);
+				font-family:Helvetica;
+			}
+			p{
+				color:rgb(50,80,50);
+				font-family:Helvetica;
+
+			}
+			li{
+				color:rgb(50,80,50);
+				font-family:Helvetica;
+			}
+			.tweets{
+				padding: -100px;
+				font-size: 0.9em;
+			}
+
+			.notes{
+				float:left;
+				letter-spacing: 30px;
+				font-weight: bold;
+				font-size:2em;
+			}
+
+
+		</style>
+		<div>
+			<h1> playing @{{ username }}'s tweets</h1>
+		
+			<ul>
+				{% for note in notes %}
+
+				<li class="notes"> {{ note }} </p>
+				
+				{% endfor %}
+			</ul>
+				
+			<ol>
+				{% for tweet in orig_tweet_arr %}
+
+				<li class="tweets"> {{ tweet }} </p>
+
+				{% endfor %}
+			</ol>	
+		</div>
+	</body>
+</html>
