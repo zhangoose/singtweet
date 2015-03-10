@@ -17,7 +17,7 @@ def wrong():
     return render_template("wrong.html");
 
 @app.route('/<username>')
-def hello(username):
+def launch(username):
     user = twitter.get_user(username)
     time = user.timeline()
 
@@ -34,7 +34,6 @@ def hello(username):
             count = count + 1
 
     notes = parse_tweet.parse_me(tweet_arr)
-    print notes
 
     return render_template("index.html", orig_tweet_arr = orig_tweet_arr, username = username, notes = notes) 
 

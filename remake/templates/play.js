@@ -8,6 +8,9 @@ var b_note = new Audio(" {{ url_for('static', filename ='piano-b.wav') }}" );
 
 var aa_notes = {'a': a_note, 'b': b_note, 'c': c_note, 'd': d_note, 'e': e_note, 'f': f_note, 'g': g_note};
 
+/**
+ * recursive function to play notes until sounds array is empty
+ */
 function play_da_tunes(sounds){
 	if(sounds.length == 0){
 		return;
@@ -20,7 +23,7 @@ function play_da_tunes(sounds){
 }//end of playdatunes
 
 /**
- * populate the notes from the python
+ * populate the notes from the python that was outputted onto the HTML
  */
 function pop_notes(){
 	var notes = [];
