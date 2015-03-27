@@ -4,3 +4,4 @@ it generates notes from your first 12 tweets and plays them
 
 
 * fun fact: won the Best Newbie Hack award
+* **reimplementation in `remake`**
